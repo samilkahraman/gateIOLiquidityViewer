@@ -189,7 +189,8 @@ console.log('Total Income: ', income, ' (', dolar * income, '₺)');
 console.log('Temporary Income: ', temp_income);
 console.log('Money To Invest: ', 100 - temp_income - money);
 // time to invest notification
-if (100 - temp_income - money) {
+let val = 100 - temp_income - money;
+if (val < 0) {
 	var xhr = new XMLHttpRequest();
 	const endpoint = 'https://kahramanlar.herokuapp.com/api/expenses/yosefu';
 	xhr.open('POST', endpoint, true);
